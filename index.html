@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EduApply - Crestwood University Application Portal.">
+    <title>Crestwood University | EduApply</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <i data-lucide="graduation-cap" class="logo-icon"></i>
+                <span>Crestwood University</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#campus-life">Campus Life</a></li>
+                <li><a href="#apply" class="btn-primary-sm">Apply</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1 class="fade-in-up">Shaping Minds. <br><span class="text-gold">Building Futures.</span></h1>
+                <p class="fade-in-up delay-1">Join a community of 14,500+ students across 240+ world-class programs at Crestwood University.</p>
+                <div class="hero-actions fade-in-up delay-2">
+                    <a href="#apply" class="btn-primary">Apply Now</a>
+                    <a href="#programs" class="btn-secondary">Explore Programs</a>
+                </div>
+                <div class="countdown fade-in-up delay-3">
+                    <i data-lucide="clock"></i> Applications close in <span id="days-count">45</span> days
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <i data-lucide="arrow-down"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Crestwood</h2>
+                    <p>Established in 1892, we've been at the forefront of academic excellence and innovation for over a century.</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Our Mission</h3>
+                        <p>To empower the next generation of global leaders through rigorous academics, innovative research, and a commitment to positive social change.</p>
+                        
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <span class="stat-num" data-target="14500">0</span>+
+                                <span class="stat-label">Students</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num" data-target="240">0</span>+
+                                <span class="stat-label">Programs</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num" data-target="94">0</span>%
+                                <span class="stat-label">Placement</span>
+                            </div>
+                        </div>
+                        <button class="btn-outline mt-4">
+                            <i data-lucide="play-circle"></i> Take Virtual Tour
+                        </button>
+                    </div>
+                    
+                    <div class="highlight-cards">
+                        <div class="card highlight-card pulse-hover">
+                            <i data-lucide="microscope" class="card-icon"></i>
+                            <h4>Research</h4>
+                            <p>$120M in ongoing research funding across 50+ cutting-edge facilities.</p>
+                        </div>
+                        <div class="card highlight-card pulse-hover">
+                            <i data-lucide="lightbulb" class="card-icon"></i>
+                            <h4>Innovation</h4>
+                            <p>Home to the Silicon Valley Innovation Hub and 200+ student startups.</p>
+                        </div>
+                        <div class="card highlight-card pulse-hover">
+                            <i data-lucide="users" class="card-icon"></i>
+                            <h4>Community</h4>
+                            <p>A diverse, inclusive campus with students from over 85 countries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="programs section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Programs & Departments</h2>
+                    <p>Find the right path for your future among our 240+ specialized degree programs.</p>
+                </div>
+                
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="stem">STEM</button>
+                    <button class="filter-btn" data-filter="humanities">Humanities</button>
+                    <button class="filter-btn" data-filter="professional">Professional</button>
+                </div>
+                
+                <div class="programs-grid" id="programs-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Admissions Section -->
+        <section id="admissions" class="admissions section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Admissions Journey</h2>
+                    <p>Your path to joining Crestwood University is simple and straightforward.</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot">1</div>
+                        <div class="timeline-content">
+                            <h3>Create Account</h3>
+                            <p>Register on the EduApply portal to start your application.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">2</div>
+                        <div class="timeline-content">
+                            <h3>Fill Application</h3>
+                            <p>Provide your personal and academic details accurately.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">3</div>
+                        <div class="timeline-content">
+                            <h3>Upload Documents</h3>
+                            <p>Submit transcripts, ID proof, and statement of purpose.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">4</div>
+                        <div class="timeline-content">
+                            <h3>Pay Fee</h3>
+                            <p>Pay the non-refundable $75 application fee securely.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">5</div>
+                        <div class="timeline-content">
+                            <h3>Await Decision</h3>
+                            <p>Results will be announced by May 15, 2025.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-container mt-5">
+                    <h3 class="text-center mb-4">Frequently Asked Questions</h3>
+                    <div class="accordion" id="faq-accordion">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campus Life Section -->
+        <section id="campus-life" class="campus-life section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Life at Crestwood</h2>
+                    <p>Experience a vibrant campus that feels like a second home.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item large" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+                        <div class="gallery-caption">State-of-the-art Library</div>
+                    </div>
+                    <div class="gallery-item" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1525926477800-7f28c29db3ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')">
+                        <div class="gallery-caption">Student Hostels</div>
+                    </div>
+                    <div class="gallery-item" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1511632765486-a01c80cb59ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')">
+                        <div class="gallery-caption">150+ Student Clubs</div>
+                    </div>
+                    <div class="gallery-item" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1546422904-90eab23c3d7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')">
+                        <div class="gallery-caption">Innovation Labs</div>
+                    </div>
+                    <div class="gallery-item" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1579370318443-8da816457e43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80')">
+                        <div class="gallery-caption">Athletics & Sports</div>
+                    </div>
+                </div>
+
+                <div class="testimonials mt-5">
+                    <div class="testimonial-carousel" id="testimonial-carousel">
+                        <!-- Populated by JS -->
+                    </div>
+                    <div class="carousel-dots">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apply Section -->
+        <section id="apply" class="apply section-padding">
+            <div class="container">
+                <div class="application-container">
+                    <div class="app-sidebar">
+                        <h2>Application Form</h2>
+                        <p>Complete the form to begin your journey at Crestwood University.</p>
+                        <div class="stepper">
+                            <div class="step active" data-step="1">
+                                <div class="step-icon"><i data-lucide="user"></i></div>
+                                <span>Personal Details</span>
+                            </div>
+                            <div class="step" data-step="2">
+                                <div class="step-icon"><i data-lucide="book-open"></i></div>
+                                <span>Academic Background</span>
+                            </div>
+                            <div class="step" data-step="3">
+                                <div class="step-icon"><i data-lucide="graduation-cap"></i></div>
+                                <span>Program Selection</span>
+                            </div>
+                            <div class="step" data-step="4">
+                                <div class="step-icon"><i data-lucide="file-up"></i></div>
+                                <span>Documents Upload</span>
+                            </div>
+                            <div class="step" data-step="5">
+                                <div class="step-icon"><i data-lucide="check-circle"></i></div>
+                                <span>Review & Submit</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="app-content">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="form-progress"></div>
+                        </div>
+                        <div class="step-header">
+                            <h3 id="step-title">Personal Details</h3>
+                            <span id="step-indicator">Step 1 of 5</span>
+                        </div>
+                        
+                        <form id="admission-form">
+                            <!-- Step 1 -->
+                            <div class="form-step active" id="step-1">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="fullName">Full Name</label>
+                                        <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+                                        <span class="error-msg"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dob">Date of Birth</label>
+                                        <input type="date" id="dob" name="dob" required>
+                                        <span class="error-msg"></span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="gender">Gender</label>
+                                        <select id="gender" name="gender" required>
+                                            <option value="">Select Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other / Prefer not to say</option>
+                                        </select>
+                                        <span class="error-msg"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nationality">Nationality</label>
+                                        <input type="text" id="nationality" name="nationality" required placeholder="e.g. American">
+                                        <span class="error-msg"></span>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                                        <span class="error-msg"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000">
+                                        <span class="error-msg"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="form-step" id="step-2">
+                                <div class="form-group">
+                                    <label for="prevSchool">Previous School / College</label>
+                                    <input type="text" id="prevSchool" name="prevSchool" required placeholder="High School Name">
+                                    <span class="error-msg"></span>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="passYear">Year of Passing</label>
+                                        <input type="number" id="passYear" name="passYear" min="2000" max="2025" required placeholder="2024">
+                                        <span class="error-msg"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gpa">Percentage / GPA</label>
+                                        <input type="text" id="gpa" name="gpa" required placeholder="e.g. 3.8 or 92%">
+                                        <span class="error-msg"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="board">Board / University</label>
+                                    <input type="text" id="board" name="board" required placeholder="State Board / CBSE / etc.">
+                                    <span class="error-msg"></span>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="form-step" id="step-3">
+                                <div class="form-group">
+                                    <label for="programPref">Preferred Program</label>
+                                    <select id="programPref" name="programPref" required>
+                                        <option value="">Select a Program</option>
+                                    </select>
+                                    <span class="error-msg"></span>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="campusPref">Campus preference</label>
+                                        <select id="campusPref" name="campusPref" required>
+                                            <option value="">Select Campus</option>
+                                            <option value="main">Main Campus - San Francisco</option>
+                                            <option value="downtown">Downtown City Campus</option>
+                                            <option value="online">Online / Remote</option>
+                                        </select>
+                                        <span class="error-msg"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="startTerm">Start Term</label>
+                                        <select id="startTerm" name="startTerm" required>
+                                            <option value="">Select Term</option>
+                                            <option value="fall2025">Fall 2025</option>
+                                            <option value="spring2026">Spring 2026</option>
+                                        </select>
+                                        <span class="error-msg"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="form-step" id="step-4">
+                                <div class="upload-grid">
+                                    <div class="upload-box" data-for="doc-photo">
+                                        <i data-lucide="image"></i>
+                                        <span>Passport Photo</span>
+                                        <input type="file" id="doc-photo" name="doc-photo" accept="image/*" class="file-input">
+                                    </div>
+                                    <div class="upload-box" data-for="doc-10th">
+                                        <i data-lucide="file-text"></i>
+                                        <span>10th Marksheet</span>
+                                        <input type="file" id="doc-10th" name="doc-10th" accept=".pdf,.jpg,.jpeg" class="file-input">
+                                    </div>
+                                    <div class="upload-box" data-for="doc-12th">
+                                        <i data-lucide="file-text"></i>
+                                        <span>12th Marksheet</span>
+                                        <input type="file" id="doc-12th" name="doc-12th" accept=".pdf,.jpg,.jpeg" class="file-input">
+                                    </div>
+                                    <div class="upload-box" data-for="doc-id">
+                                        <i data-lucide="credit-card"></i>
+                                        <span>ID Proof</span>
+                                        <input type="file" id="doc-id" name="doc-id" accept=".pdf,.jpg,.jpeg" class="file-input">
+                                    </div>
+                                    <div class="upload-box full-width" data-for="doc-sop">
+                                        <i data-lucide="file-signature"></i>
+                                        <span>Statement of Purpose (SOP)</span>
+                                        <input type="file" id="doc-sop" name="doc-sop" accept=".pdf,.doc,.docx" class="file-input">
+                                    </div>
+                                </div>
+                                <div id="upload-status" class="upload-status"></div>
+                            </div>
+
+                            <!-- Step 5 -->
+                            <div class="form-step" id="step-5">
+                                <div class="summary-box">
+                                    <h4>Application Summary</h4>
+                                    <div id="summary-content" class="summary-content">
+                                        <!-- Populated via JS -->
+                                    </div>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">I agree to the Terms, Privacy Policy, and confirm that the information provided is accurate.</label>
+                                </div>
+                            </div>
+
+                            <!-- Form Navigation -->
+                            <div class="form-navigation">
+                                <button type="button" id="prev-btn" class="btn-outline" style="display: none;">Back</button>
+                                <button type="button" id="save-btn" class="btn-text">Save Draft</button>
+                                <button type="button" id="next-btn" class="btn-primary">Next Step</button>
+                                <button type="submit" id="submit-btn" class="btn-primary" style="display: none;">Submit Application</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">
+                    <i data-lucide="graduation-cap"></i>
+                    <span>Crestwood University</span>
+                </a>
+                <p>Shaping Minds. Building Futures since 1892.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#admissions">Admissions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" required>
+                    <button type="submit" aria-label="Subscribe"><i data-lucide="send"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Crestwood University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <i data-lucide="check-circle" class="success-icon text-gold"></i>
+            <h2>Application Submitted!</h2>
+            <p>Thank you for applying to Crestwood University.</p>
+            <div class="app-id-box">
+                <span>Application ID:</span>
+                <strong id="display-app-id">CWU-2025-XXXX</strong>
+            </div>
+            <p class="modal-note">We've sent a confirmation email. Our admissions team will review your application.</p>
+            <button id="close-modal" class="btn-primary mt-4">Return Home</button>
+            <div id="confetti-container"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
