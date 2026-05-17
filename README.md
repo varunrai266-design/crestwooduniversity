@@ -38,3 +38,6 @@ Because this project uses vanilla web technologies and handles logic client-side
 1.  Simply grab the project directory.
 2.  Open `index.html` in any modern web browser (Edge, Chrome, Firefox, Safari).
 3.  Scroll through the site and try out the multi-step form in the "Apply" section.
+
+<img width="1884" height="911" alt="image" src="https://github.com/user-attachments/assets/79d372d2-76f5-447d-8d15-f0d629c526ab" />
+
